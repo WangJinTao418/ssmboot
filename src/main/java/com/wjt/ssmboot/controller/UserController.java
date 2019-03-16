@@ -1,4 +1,4 @@
-package com.wjt.ssmboot.Controller;
+package com.wjt.ssmboot.controller;
 
 import com.wjt.ssmboot.domain.User;
 import com.wjt.ssmboot.service.UserService;

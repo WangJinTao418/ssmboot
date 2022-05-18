@@ -1,16 +1,25 @@
 package com.wjt.ssmboot;
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-@RunWith(SpringRunner.class)
+import java.io.IOException;
+import java.io.InputStream;
+
+@ExtendWith(SpringExtension.class)
 @SpringBootTest
 public class SsmbootApplicationTests {
 
     @Test
-    public void contextLoads() {
+    public void contextLoads() throws IOException {
+        String resource = "";
+        InputStream inputStream = Resources.getResourceAsStream(resource);
+        SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
     }
 
 }
